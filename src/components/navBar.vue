@@ -334,7 +334,7 @@ onMounted(() => {
           right: 28px;
           background: none;
           scale: 0;
-          transition: scale 0.3s calc(var(--i) * 0.3s);
+          transition: scale 0.3s calc(var(--i) * 0.3s + 0.3s);
 
           svg,
           * {
@@ -342,6 +342,7 @@ onMounted(() => {
             cursor: pointer;
             width: 40px;
             height: 40px;
+            transition: 0.3s;
           }
         }
         .routes {
