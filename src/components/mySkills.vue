@@ -28,6 +28,18 @@
   </div>
 </template>
 <script setup>
+import nuxtImage from '@/assets/skills/nuxt.svg'
+import vueImage from '@/assets/skills/vue.svg'
+import vuetifyImage from '@/assets/skills/vuetify.svg'
+import piniaImage from '@/assets/skills/pinia.svg'
+import javascriptImage from '@/assets/skills/javascript.svg'
+import bootstrapImage from '@/assets/skills/bootstrap.svg'
+import cssImage from '@/assets/skills/css.svg'
+import html5Image from '@/assets/skills/html5.svg'
+import php_lightImage from '@/assets/skills/php_light.svg'
+import php_darkImage from '@/assets/skills/php_dark.svg'
+import csharpImage from '@/assets/skills/csharp.svg'
+
 import sectionHeading from '../components/sectionHeading.vue'
 import { mainStore } from '../stores/mainStore'
 import { storeToRefs } from 'pinia'
@@ -36,93 +48,93 @@ const store = mainStore()
 const theme = storeToRefs(store).theme
 // const skillBoxBack = computed(() => (theme.value == 'light' ? '#f3f3f3' : '#181818'))
 const skills = computed(() => {
-  if (theme.value == 'light') {
-    return [
-      {
-        img: `/assets/skills/nuxt.svg`,
-        text: `Nuxt Js`
-      },
-      {
-        img: `/assets/skills/vue.svg`,
-        text: `Vue Js`
-      },
-      {
-        img: `/assets/skills/vuetify.svg`,
-        text: `Vuetify`
-      },
-      {
-        img: `/assets/skills/pinia.svg`,
-        text: `Pinia`
-      },
-      {
-        img: `/assets/skills/javascript.svg`,
-        text: `JavaScript`
-      },
-      {
-        img: `/assets/skills/bootstrap.svg`,
-        text: `Bootstrap`
-      },
-      {
-        img: `/assets/skills/css.svg`,
-        text: `CSS`
-      },
-      {
-        img: `/assets/skills/html5.svg`,
-        text: `HTML`
-      },
-      {
-        img: `/assets/skills/php_light.svg`,
-        text: `php`
-      },
-      {
-        img: `/assets/skills/csharp.svg`,
-        text: `C#`
-      }
-    ]
-  } else {
-    return [
-      {
-        img: `/assets/skills/nuxt.svg`,
-        text: `Nuxt Js`
-      },
-      {
-        img: `/assets/skills/vue.svg`,
-        text: `Vue Js`
-      },
-      {
-        img: `/assets/skills/vuetify.svg`,
-        text: `Vuetify`
-      },
-      {
-        img: `/assets/skills/pinia.svg`,
-        text: `Pinia`
-      },
-      {
-        img: `/assets/skills/javascript.svg`,
-        text: `JavaScript`
-      },
-      {
-        img: `/assets/skills/bootstrap.svg`,
-        text: `Bootstrap`
-      },
-      {
-        img: `/assets/skills/css.svg`,
-        text: `CSS`
-      },
-      {
-        img: `/assets/skills/html5.svg`,
-        text: `HTML`
-      },
-      {
-        img: `/assets/skills/php_dark.svg`,
-        text: `php`
-      },
-      {
-        img: `/assets/skills/csharp.svg`,
-        text: `C#`
-      }
-    ]
-  }
+  // if (theme.value == 'light') {
+  return [
+    {
+      img: nuxtImage,
+      text: `Nuxt Js`
+    },
+    {
+      img: vueImage,
+      text: `Vue Js`
+    },
+    {
+      img: vuetifyImage,
+      text: `Vuetify`
+    },
+    {
+      img: piniaImage,
+      text: `Pinia`
+    },
+    {
+      img: javascriptImage,
+      text: `JavaScript`
+    },
+    {
+      img: bootstrapImage,
+      text: `Bootstrap`
+    },
+    {
+      img: cssImage,
+      text: `CSS`
+    },
+    {
+      img: html5Image,
+      text: `HTML`
+    },
+    {
+      img: theme.value == 'light' ? php_lightImage : php_darkImage,
+      text: `php`
+    },
+    {
+      img: csharpImage,
+      text: `C#`
+    }
+  ]
+  // } else {
+  //   return [
+  //     {
+  //       img: `/assets/skills/nuxt.svg`,
+  //       text: `Nuxt Js`
+  //     },
+  //     {
+  //       img: `/assets/skills/vue.svg`,
+  //       text: `Vue Js`
+  //     },
+  //     {
+  //       img: `/assets/skills/vuetify.svg`,
+  //       text: `Vuetify`
+  //     },
+  //     {
+  //       img: `/assets/skills/pinia.svg`,
+  //       text: `Pinia`
+  //     },
+  //     {
+  //       img: `/assets/skills/javascript.svg`,
+  //       text: `JavaScript`
+  //     },
+  //     {
+  //       img: `/assets/skills/bootstrap.svg`,
+  //       text: `Bootstrap`
+  //     },
+  //     {
+  //       img: `/assets/skills/css.svg`,
+  //       text: `CSS`
+  //     },
+  //     {
+  //       img: `/assets/skills/html5.svg`,
+  //       text: `HTML`
+  //     },
+  //     {
+  //       img: `/assets/skills/php_dark.svg`,
+  //       text: `php`
+  //     },
+  //     {
+  //       img: `/assets/skills/csharp.svg`,
+  //       text: `C#`
+  //     }
+  //   ]
+  // }
 })
 // let skillsImages = []
 // for (let i = 0; i < skills.value.length; i++) {

@@ -15,7 +15,7 @@
       <div class="project-container tr">
         <div class="number">{{ index + 1 }}</div>
         <div class="image-container">
-          <img :src="`/assets/projects/${project.imgs[0]}`" alt="" />
+          <img :src="project.imgs[0]" alt="" />
         </div>
         <div class="text">
           <div class="project-title">{{ project.name }}</div>
