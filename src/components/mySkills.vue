@@ -7,8 +7,8 @@
           v-for="(skill, i) in skills"
           :key="i"
           v-motion
-          :initial="{ scale: 0.9, opacity: 0, y: i % 2 == 0 ? 50 : -50 }"
-          :visible="{ scale: 1, opacity: 1, y: 0 }"
+          :initial="{ scale: 0.8, opacity: 0,y:50, x: i % 2 == 0 ? 20 : -20 }"
+          :visible="{ scale: 1, opacity: 1,y:0, x: 0 }"
           :duration="500"
           :transition="{
             type: 'linear'
@@ -39,6 +39,10 @@ import html5Image from '@/assets/skills/html5.svg'
 import php_lightImage from '@/assets/skills/php_light.svg'
 import php_darkImage from '@/assets/skills/php_dark.svg'
 import csharpImage from '@/assets/skills/csharp.svg'
+import github_dark from '@/assets/skills/Github_dark.svg'
+import github_light from '@/assets/skills/Github_light.svg'
+import mysql from '@/assets/skills/mysql.svg'
+import vite from '@/assets/skills/vitejs.svg'
 
 import sectionHeading from '../components/sectionHeading.vue'
 import { mainStore } from '../stores/mainStore'
@@ -61,6 +65,10 @@ const skills = computed(() => {
     {
       img: vuetifyImage,
       text: `Vuetify`
+    },
+    {
+      img: vite,
+      text: `Vite`
     },
     {
       img: piniaImage,
@@ -87,8 +95,16 @@ const skills = computed(() => {
       text: `php`
     },
     {
+      img: mysql,
+      text: `MySQL`
+    },
+    {
       img: csharpImage,
       text: `C#`
+    },
+    {
+      img: theme.value == 'light' ? github_light : github_dark,
+      text: `Github`
     }
   ]
   // } else {

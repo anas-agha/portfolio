@@ -9,6 +9,7 @@
 <script setup></script>
 <style lang="scss">
 footer {
+  margin-top: auto;
   .container {
     font-size: 19px;
     text-align: center;
@@ -19,8 +20,8 @@ footer {
         fill: var(--red);
       }
     }
-    span.colored{
-        color:var(--active-color)
+    span.colored {
+      color: var(--active-color);
     }
   }
 }

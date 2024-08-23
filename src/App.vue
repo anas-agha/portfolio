@@ -54,6 +54,9 @@ watch(dir, setDir)
 body {
   background-color: var(--back-color);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 * {
   margin: 0;
