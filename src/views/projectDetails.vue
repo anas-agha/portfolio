@@ -2,7 +2,7 @@
   <div class="project">
     <div v-if="project" class="container">
       <div class="project-main-image">
-        <img :src="project.imgs[0]" />
+        <img loading="lazy" :src="project.imgs[0]" />
       </div>
       <div class="text tr">
         <div class="name tr">
@@ -38,7 +38,7 @@
             v-for="img in project.imgs"
             :key="img"
           >
-            <img :src="img" alt="" />
+            <img loading="lazy" :src="img" alt="" />
           </div>
         </div>
       </div>

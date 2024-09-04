@@ -49,7 +49,7 @@
           :duration="600"
           class="image-container"
         >
-          <img src="@/assets/anas taleb agha.webp" alt="" />
+          <img loading="lazy" src="@/assets/anas taleb agha.webp" alt="" />
         </div>
       </div>
     </div>

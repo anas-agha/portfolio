@@ -13,7 +13,7 @@
           :duration="600"
           class="image-container"
         >
-          <img src="../assets/4674889.png" alt="" />
+          <img loading="lazy" src="../assets/4674889.png" alt="" />
         </div>
       </div>
     </div>

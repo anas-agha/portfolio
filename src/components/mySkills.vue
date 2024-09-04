@@ -7,8 +7,8 @@
           v-for="(skill, i) in skills"
           :key="i"
           v-motion
-          :initial="{ scale: 0.8, opacity: 0,y:50, x: i % 2 == 0 ? 20 : -20 }"
-          :visible="{ scale: 1, opacity: 1,y:0, x: 0 }"
+          :initial="{ scale: 0.8, opacity: 0, y: 50, x: i % 2 == 0 ? 20 : -20 }"
+          :visible="{ scale: 1, opacity: 1, y: 0, x: 0 }"
           :duration="500"
           :transition="{
             type: 'linear'
@@ -17,7 +17,7 @@
         >
           <div class="skill-box-container">
             <div class="skill-icon">
-              <img :src="skill.img" :alt="skill.text" />
+              <img loading="lazy" :src="skill.img" :alt="skill.text" />
             </div>
             <div class="skill-text">{{ skill.text }}</div>
           </div>

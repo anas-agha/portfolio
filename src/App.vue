@@ -1,4 +1,5 @@
 <template>
+  <preLoader v-if="!loaded" />
   <navBarVue />
   <whatsApp />
   <router-view v-slot="{ Component }">
@@ -10,11 +11,12 @@
 </template>
 <script setup>
 import myFooter from './components/myFooter.vue'
+import preLoader from './components/preLoader.vue'
 import navBarVue from './components/navBar.vue'
 import whatsApp from './components/whatsApp.vue'
 import { mainStore } from './stores/mainStore'
 import { storeToRefs } from 'pinia'
-import { watch } from 'vue'
+import { watch, ref } from 'vue'
 // delay for mobile devices based on nav bar animation duration and delay
 const store = storeToRefs(mainStore())
 const themeNow = store.theme
@@ -42,6 +44,14 @@ function setDir() {
 }
 setDir()
 watch(dir, setDir)
+// preloader
+const loaded = ref(false)
+const bodyScroll = ref('hidden')
+
+window.onload = function () {
+  loaded.value = true
+  bodyScroll.value = 'initial'
+}
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
@@ -53,6 +63,7 @@ watch(dir, setDir)
 /* Override default Bootstrap container widths */
 body {
   background-color: var(--back-color);
+  overflow: v-bind(bodyScroll);
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;

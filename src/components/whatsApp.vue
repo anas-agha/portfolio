@@ -1,7 +1,7 @@
 <template>
   <div class="whats-app">
     <a href="https://wa.me/+963980791411" target="_blank"
-      ><img src="@/assets/whatsapp.svg" alt=""
+      ><img loading="lazy" src="@/assets/whatsapp.svg" alt=""
     /></a>
   </div>
 </template>
